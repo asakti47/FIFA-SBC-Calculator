@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<hr class ="solid">
+<form method="POST" action="{{ url_for('views.output_ratings') }}">
+    <p>
+      <h5>Enter Ratings:</h5>
+      <input type="text" id="ratingList" name="ratingList"></input>
+      <br><small>*Each rating must be seperated by a comma. Example: 81, 82, 83, 85</small><br>
+    </p>
+    <p>
+      <h5>Target Rating:</h5>
+      <input type="text" id="targetRating" name="targetRating"></input>
+    </p>
+    <p>
+      <h5>Rating Range:</h5>
+      <input type="text" id="minRating" name="minRating"></input> to <input type="text" id="maxRating" name="maxRating"></input>
+    </p>
+    <p>
+      <input type="submit" name="submit-btn" value="Submit" />
+    </p>
+  </form>
+{% endblock %}

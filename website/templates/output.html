@@ -1,0 +1,8 @@
+{% extends 'index.html' %}
+
+{% block output %}
+<hr class ="solid">
+{% for table in tables %}
+            {{ table|safe }}
+{% endfor %}
+{% endblock %}
